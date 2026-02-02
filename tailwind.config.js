@@ -7,10 +7,10 @@ export default {
     theme: {
         extend: {
             colors: {
-                'brand-orange': '#FF9E5E', // Ajuste para o hex do seu Figma
+                'brand-orange': '#FF9B51', // Ajuste para o hex do seu Figma
             },
             boxShadow: {
-                'neo': '5px 5px 0px 0px rgba(0, 0, 0, 1)',
+                'neo': '5px 5px 0px 0px #1E1E1E', // Sombra personalizada
             }
         },
     },

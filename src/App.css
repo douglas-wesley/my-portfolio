@@ -89,10 +89,18 @@
   border: 3px solid #111827;
   background-color: #f9fafb;
   box-shadow: 4px 4px 0 #111827;
+  overflow: hidden;
+}
+
+.hero-photo {
+  display: block;
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
 }
 
 .photo-placeholder {
-  height: 220px;
+  height: 360px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,6 +135,9 @@
   box-shadow: 4px 4px 0 #111827;
   display: flex;
   flex-direction: column;
+  min-width: 320px;
+  max-width: 360px;
+  flex-shrink: 0;
 }
 
 .window-header {
@@ -143,18 +154,8 @@
   height: 10px;
   border-radius: 999px;
   display: inline-block;
-}
-
-.dot.red {
-  background-color: #ef4444;
-}
-
-.dot.yellow {
-  background-color: #facc15;
-}
-
-.dot.green {
-  background-color: #22c55e;
+  border: 3px solid #1e1e1e;
+  background-color: transparent;
 }
 
 .project-content {
@@ -181,20 +182,30 @@
 /* Skills */
 
 .skills-strip {
-  max-width: 700px;
+  max-width: 900px;
   margin: 0 auto;
   background-color: #f97316;
   border: 3px solid #111827;
   box-shadow: 4px 4px 0 #111827;
-  padding: 0.75rem 1.25rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
+  padding: 1.2rem 1rem;
+  overflow: hidden;
 }
 
 .skills-strip span {
   font-weight: 600;
+}
+
+.skill-icon {
+  width: 53px;
+  height: 53px;
+  object-fit: contain;
+}
+
+.skills-track {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  animation: skills-scroll 25s linear infinite;
 }
 
 /* Formation */
@@ -205,45 +216,87 @@
   background-color: #f9fafb;
   border: 3px solid #111827;
   box-shadow: 4px 4px 0 #111827;
+  overflow: hidden;
 }
 
 .formation-body {
   display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.7fr);
-}
-
-.formation-image-placeholder {
-  background-color: #d1d5db;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  padding: 1rem;
-  font-weight: 700;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 2.1fr);
+  align-items: center;
+  padding: 1.75rem 2rem;
+  gap: 2rem;
+  background-color: #f9fafb;
 }
 
 .formation-text {
-  padding: 1.25rem;
+  padding: 0;
 }
 
 .formation-text h3 {
   margin: 0 0 0.5rem;
+  font-size: 1.15rem;
 }
 
 .formation-text p {
-  margin: 0;
+  margin: 0 0 0.25rem;
   color: #4b5563;
+  font-size: 0.95rem;
+}
+
+.formation-text .formation-period {
+  margin: 0.5rem 0 0;
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+.formation-card .window-header {
+  background-color: #f97316;
+}
+
+.formation-card .dot {
+  background-color: #f9fafb;
+}
+
+.formation-cover {
+  border-bottom: 2px solid #111827;
+}
+
+.formation-cover-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+.formation-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formation-logo-image {
+  max-width: 120px;
+  height: auto;
 }
 
 /* Botões */
 
 .btn {
-  border-radius: 999px;
-  border: 2px solid #111827;
+  border-radius: 0;
+  border: 3px solid #1e1e1e;
   padding: 0.4rem 1.2rem;
   font-size: 0.9rem;
   font-weight: 600;
   background-color: #f9fafb;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-icon {
+  width: 16px;
+  height: 16px;
 }
 
 .btn.primary {
@@ -258,15 +311,22 @@
   filter: brightness(0.95);
 }
 
+.projects-carousel {
+  margin-top: 1.5rem;
+  overflow: hidden;
+}
+
+.projects-track {
+  display: flex;
+  gap: 1.5rem;
+  animation: projects-scroll 35s linear infinite;
+}
+
 /* Responsividade */
 
 @media (max-width: 900px) {
   .hero-card {
     grid-template-columns: 1fr;
-  }
-
-  .projects-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -280,8 +340,24 @@
   .portfolio-main {
     padding-inline: 1rem;
   }
+}
 
-  .projects-grid {
-    grid-template-columns: 1fr;
+@keyframes skills-scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes projects-scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
   }
 }
