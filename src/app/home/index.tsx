@@ -1,5 +1,6 @@
 import ProjectCard from '../components/ProjectCard'
 import { GithubButton, ActionButton } from '../components/ActionButton'
+import Carousel from '../components/Carousel'
 
 const Home = () => {
 	return (
@@ -68,75 +69,71 @@ const Home = () => {
 
 				<section id="projects" className="section projects-section">
 					<h2 className="section-title">Projects</h2>
-					<div className="projects-carousel">
-						<div className="projects-track">
-							<ProjectCard
-								title="Hospital API"
-								description="Built a Java/Spring Boot system for hospital workflows with JWT-based RBAC security for multiple user roles and complete Swagger documentation."
-								onViewProject={() => window.open('https://github.com/douglas-wesley/hospital-api', '_blank')}
-							/>
+					<Carousel className="projects-carousel">
+						<ProjectCard
+							title="Hospital API"
+							description="Built a Java/Spring Boot system for hospital workflows with JWT-based RBAC security for multiple user roles and complete Swagger documentation."
+							onViewProject={() => window.open('https://github.com/douglas-wesley/hospital-api', '_blank')}
+						/>
 
-							<ProjectCard
-								title="Personal Finance API"
-								description="Developed a Java/Spring Boot REST API for financial management featuring automated balance reconciliation, limit setting, and full Docker containerization."
-								onViewProject={() => window.open('https://github.com/douglas-wesley/personal-finance-api', '_blank')}
-							/>
+						<ProjectCard
+							title="Personal Finance API"
+							description="Developed a Java/Spring Boot REST API for financial management featuring automated balance reconciliation, limit setting, and full Docker containerization."
+							onViewProject={() => window.open('https://github.com/douglas-wesley/personal-finance-api', '_blank')}
+						/>
 
-							<ProjectCard
-								title="Hostify"
-								description="Collaborated on a cross-platform app for the hotel industry using React Native and a backend in Java/Spring Boot to handle reservations and room management."
-								onViewProject={() => window.open('https://github.com/douglas-wesley/hostify', '_blank')}
-							/>
+						<ProjectCard
+							title="Hostify"
+							description="Collaborated on a cross-platform app for the hotel industry using React Native and a backend in Java/Spring Boot to handle reservations and room management."
+							onViewProject={() => window.open('https://github.com/douglas-wesley/hostify', '_blank')}
+						/>
 
-							{/* duplicação para carrossel contínuo */}
-							<ProjectCard
-								title="Hospital API"
-								description="Built a Java/Spring Boot system for hospital workflows with JWT-based RBAC security for multiple user roles and complete Swagger documentation."
-								onViewProject={() => window.open('https://github.com/douglas-wesley/hospital-api', '_blank')}
-							/>
+						{/* duplicação para carrossel contínuo */}
+						<ProjectCard
+							title="Hospital API"
+							description="Built a Java/Spring Boot system for hospital workflows with JWT-based RBAC security for multiple user roles and complete Swagger documentation."
+							onViewProject={() => window.open('https://github.com/douglas-wesley/hospital-api', '_blank')}
+						/>
 
-							<ProjectCard
-								title="Personal Finance API"
-								description="Developed a Java/Spring Boot REST API for financial management featuring automated balance reconciliation, limit setting, and full Docker containerization."
-								onViewProject={() => window.open('https://github.com/douglas-wesley/personal-finance-api', '_blank')}
-							/>
+						<ProjectCard
+							title="Personal Finance API"
+							description="Developed a Java/Spring Boot REST API for financial management featuring automated balance reconciliation, limit setting, and full Docker containerization."
+							onViewProject={() => window.open('https://github.com/douglas-wesley/personal-finance-api', '_blank')}
+						/>
 
-							<ProjectCard
-								title="Hostify"
-								description="Collaborated on a cross-platform app for the hotel industry using React Native and a backend in Java/Spring Boot to handle reservations and room management."
-								onViewProject={() => window.open('https://github.com/douglas-wesley/hostify', '_blank')}
-							/>
-						</div>
-					</div>
+						<ProjectCard
+							title="Hostify"
+							description="Collaborated on a cross-platform app for the hotel industry using React Native and a backend in Java/Spring Boot to handle reservations and room management."
+							onViewProject={() => window.open('https://github.com/douglas-wesley/hostify', '_blank')}
+						/>
+					</Carousel>
 				</section>
 
 				<section id="skills" className="section skills-section">
 					<h2 className="section-title">My Skills</h2>
-					<div className="skills-strip">
-						<div className="skills-track">
-							<img src="/java-svgrepo-com.svg" alt="Java" className="skill-icon" />
-							<img src="/spring-svgrepo-com.svg" alt="Spring" className="skill-icon" />
-							<img src="/python.svg" alt="Python" className="skill-icon" />
-							<img src="/pandas-svgrepo-com.svg" alt="Pandas" className="skill-icon" />
-							<img src="/react-svgrepo-com.svg" alt="React" className="skill-icon" />
-							<img src="/fastapi-svgrepo-com.svg" alt="FastAPI" className="skill-icon" />
-							<img src="/docker-svgrepo-com.svg" alt="Docker" className="skill-icon" />
-							<img src="/postgresql-svgrepo-com.svg" alt="PostgreSQL" className="skill-icon" />
-							<img src="/mysql-svgrepo-com.svg" alt="MySQL" className="skill-icon" />
-							<img src="/mongodb-svgrepo-com.svg" alt="MongoDB" className="skill-icon" />
-							{/* repetição para carrossel contínuo */}
-							<img src="/java-svgrepo-com.svg" alt="Java" className="skill-icon" />
-							<img src="/spring-svgrepo-com.svg" alt="Spring" className="skill-icon" />
-							<img src="/python.svg" alt="Python" className="skill-icon" />
-							<img src="/pandas-svgrepo-com.svg" alt="Pandas" className="skill-icon" />
-							<img src="/react-svgrepo-com.svg" alt="React" className="skill-icon" />
-							<img src="/fastapi-svgrepo-com.svg" alt="FastAPI" className="skill-icon" />
-							<img src="/docker-svgrepo-com.svg" alt="Docker" className="skill-icon" />
-							<img src="/postgresql-svgrepo-com.svg" alt="PostgreSQL" className="skill-icon" />
-							<img src="/mysql-svgrepo-com.svg" alt="MySQL" className="skill-icon" />
-							<img src="/mongodb-svgrepo-com.svg" alt="MongoDB" className="skill-icon" />
-						</div>
-					</div>
+					<Carousel className="skills-strip" speed={0.3}>
+						<img src="/java-svgrepo-com.svg" alt="Java" className="skill-icon" />
+						<img src="/spring-svgrepo-com.svg" alt="Spring" className="skill-icon" />
+						<img src="/python.svg" alt="Python" className="skill-icon" />
+						<img src="/pandas-svgrepo-com.svg" alt="Pandas" className="skill-icon" />
+						<img src="/react-svgrepo-com.svg" alt="React" className="skill-icon" />
+						<img src="/fastapi-svgrepo-com.svg" alt="FastAPI" className="skill-icon" />
+						<img src="/docker-svgrepo-com.svg" alt="Docker" className="skill-icon" />
+						<img src="/postgresql-svgrepo-com.svg" alt="PostgreSQL" className="skill-icon" />
+						<img src="/mysql-svgrepo-com.svg" alt="MySQL" className="skill-icon" />
+						<img src="/mongodb-svgrepo-com.svg" alt="MongoDB" className="skill-icon" />
+						{/* repetição para carrossel contínuo */}
+						<img src="/java-svgrepo-com.svg" alt="Java" className="skill-icon" />
+						<img src="/spring-svgrepo-com.svg" alt="Spring" className="skill-icon" />
+						<img src="/python.svg" alt="Python" className="skill-icon" />
+						<img src="/pandas-svgrepo-com.svg" alt="Pandas" className="skill-icon" />
+						<img src="/react-svgrepo-com.svg" alt="React" className="skill-icon" />
+						<img src="/fastapi-svgrepo-com.svg" alt="FastAPI" className="skill-icon" />
+						<img src="/docker-svgrepo-com.svg" alt="Docker" className="skill-icon" />
+						<img src="/postgresql-svgrepo-com.svg" alt="PostgreSQL" className="skill-icon" />
+						<img src="/mysql-svgrepo-com.svg" alt="MySQL" className="skill-icon" />
+						<img src="/mongodb-svgrepo-com.svg" alt="MongoDB" className="skill-icon" />
+					</Carousel>
 				</section>
 
 				<section id="formation" className="section formation-section">

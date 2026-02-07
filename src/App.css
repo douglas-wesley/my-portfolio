@@ -188,7 +188,6 @@
   border: 3px solid #111827;
   box-shadow: 4px 4px 0 #111827;
   padding: 1.2rem 1rem;
-  overflow: hidden;
 }
 
 .skills-strip span {
@@ -199,13 +198,6 @@
   width: 53px;
   height: 53px;
   object-fit: contain;
-}
-
-.skills-track {
-  display: flex;
-  align-items: center;
-  gap: 1.75rem;
-  animation: skills-scroll 25s linear infinite;
 }
 
 /* Formation */
@@ -313,13 +305,6 @@
 
 .projects-carousel {
   margin-top: 1.5rem;
-  overflow: hidden;
-}
-
-.projects-track {
-  display: flex;
-  gap: 1.5rem;
-  animation: projects-scroll 35s linear infinite;
 }
 
 /* Responsividade */
@@ -339,25 +324,5 @@
 
   .portfolio-main {
     padding-inline: 1rem;
-  }
-}
-
-@keyframes skills-scroll {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-@keyframes projects-scroll {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(-50%);
   }
 }
