@@ -3,6 +3,8 @@ import ProjectCard from '../components/ProjectCard'
 import { GithubButton, ActionButton } from '../components/ActionButton'
 import Carousel from '../components/Carousel'
 
+const base = import.meta.env.BASE_URL
+
 const Home = () => {
 	const [menuOpen, setMenuOpen] = useState(false)
 
@@ -43,21 +45,21 @@ const Home = () => {
 							</p>
 							<div className="hero-highlights">
 								<div className="hero-highlight-item">
-									<img src="/focus.svg" alt="" className="highlight-icon" />
+									<img src={`${base}focus.svg`} alt="" className="highlight-icon" />
 									<div className="highlight-text">
 										<span className="highlight-label">Focus</span>
 										<span className="highlight-value">Backend &amp; APIs</span>
 									</div>
 								</div>
 								<div className="hero-highlight-item">
-									<img src="/stack.svg" alt="" className="highlight-icon" />
+									<img src={`${base}stack.svg`} alt="" className="highlight-icon" />
 									<div className="highlight-text">
 										<span className="highlight-label">Stack</span>
 										<span className="highlight-value">Java &amp; Spring Boot</span>
 									</div>
 								</div>
 								<div className="hero-highlight-item">
-									<img src="/location.svg" alt="" className="highlight-icon" />
+									<img src={`${base}location.svg`} alt="" className="highlight-icon" />
 									<div className="highlight-text">
 										<span className="highlight-label">Location</span>
 										<span className="highlight-value">Recife, PE</span>
@@ -71,7 +73,7 @@ const Home = () => {
 								<span className="dot" />
 							</div>
 							<img
-								src="/images/eu.jpeg"
+								src={`${base}images/eu.jpeg`}
 								alt="Douglas Wesley"
 								className="hero-photo"
 							/>
@@ -88,7 +90,7 @@ const Home = () => {
 							variant='primary'
 							onClick={() => window.open('https://www.linkedin.com/in/douglas-wesley/', '_blank')}
 							rightIcon={
-								<img src="/linkedin.svg" alt="LinkedIn" className="btn-icon" />
+								<img src={`${base}linkedin.svg`} alt="LinkedIn" className="btn-icon" />
 							}
 						/>
 						<ActionButton
@@ -96,7 +98,7 @@ const Home = () => {
 							variant='primary'
 							onClick={() => (window.location.href = 'mailto:douglas@example.com')}
 							rightIcon={
-								<img src="/email.svg" alt="Email" className="btn-icon" />
+								<img src={`${base}email.svg`} alt="Email" className="btn-icon" />
 							}
 						/>
 					</div>
@@ -147,27 +149,27 @@ const Home = () => {
 				<section id="skills" className="section skills-section">
 					<h2 className="section-title">My Skills</h2>
 					<Carousel className="skills-strip" speed={0.3}>
-						<img src="/java-svgrepo-com.svg" alt="Java" className="skill-icon" />
-						<img src="/spring-svgrepo-com.svg" alt="Spring" className="skill-icon" />
-						<img src="/python.svg" alt="Python" className="skill-icon" />
-						<img src="/pandas-svgrepo-com.svg" alt="Pandas" className="skill-icon" />
-						<img src="/react-svgrepo-com.svg" alt="React" className="skill-icon" />
-						<img src="/fastapi-svgrepo-com.svg" alt="FastAPI" className="skill-icon" />
-						<img src="/docker-svgrepo-com.svg" alt="Docker" className="skill-icon" />
-						<img src="/postgresql-svgrepo-com.svg" alt="PostgreSQL" className="skill-icon" />
-						<img src="/mysql-svgrepo-com.svg" alt="MySQL" className="skill-icon" />
-						<img src="/mongodb-svgrepo-com.svg" alt="MongoDB" className="skill-icon" />
+						<img src={`${base}java-svgrepo-com.svg`} alt="Java" className="skill-icon" />
+						<img src={`${base}spring-svgrepo-com.svg`} alt="Spring" className="skill-icon" />
+						<img src={`${base}python.svg`} alt="Python" className="skill-icon" />
+						<img src={`${base}pandas-svgrepo-com.svg`} alt="Pandas" className="skill-icon" />
+						<img src={`${base}react-svgrepo-com.svg`} alt="React" className="skill-icon" />
+						<img src={`${base}fastapi-svgrepo-com.svg`} alt="FastAPI" className="skill-icon" />
+						<img src={`${base}docker-svgrepo-com.svg`} alt="Docker" className="skill-icon" />
+						<img src={`${base}postgresql-svgrepo-com.svg`} alt="PostgreSQL" className="skill-icon" />
+						<img src={`${base}mysql-svgrepo-com.svg`} alt="MySQL" className="skill-icon" />
+						<img src={`${base}mongodb-svgrepo-com.svg`} alt="MongoDB" className="skill-icon" />
 						{/* repetição para carrossel contínuo */}
-						<img src="/java-svgrepo-com.svg" alt="Java" className="skill-icon" />
-						<img src="/spring-svgrepo-com.svg" alt="Spring" className="skill-icon" />
-						<img src="/python.svg" alt="Python" className="skill-icon" />
-						<img src="/pandas-svgrepo-com.svg" alt="Pandas" className="skill-icon" />
-						<img src="/react-svgrepo-com.svg" alt="React" className="skill-icon" />
-						<img src="/fastapi-svgrepo-com.svg" alt="FastAPI" className="skill-icon" />
-						<img src="/docker-svgrepo-com.svg" alt="Docker" className="skill-icon" />
-						<img src="/postgresql-svgrepo-com.svg" alt="PostgreSQL" className="skill-icon" />
-						<img src="/mysql-svgrepo-com.svg" alt="MySQL" className="skill-icon" />
-						<img src="/mongodb-svgrepo-com.svg" alt="MongoDB" className="skill-icon" />
+						<img src={`${base}java-svgrepo-com.svg`} alt="Java" className="skill-icon" />
+						<img src={`${base}spring-svgrepo-com.svg`} alt="Spring" className="skill-icon" />
+						<img src={`${base}python.svg`} alt="Python" className="skill-icon" />
+						<img src={`${base}pandas-svgrepo-com.svg`} alt="Pandas" className="skill-icon" />
+						<img src={`${base}react-svgrepo-com.svg`} alt="React" className="skill-icon" />
+						<img src={`${base}fastapi-svgrepo-com.svg`} alt="FastAPI" className="skill-icon" />
+						<img src={`${base}docker-svgrepo-com.svg`} alt="Docker" className="skill-icon" />
+						<img src={`${base}postgresql-svgrepo-com.svg`} alt="PostgreSQL" className="skill-icon" />
+						<img src={`${base}mysql-svgrepo-com.svg`} alt="MySQL" className="skill-icon" />
+						<img src={`${base}mongodb-svgrepo-com.svg`} alt="MongoDB" className="skill-icon" />
 					</Carousel>
 				</section>
 
@@ -180,14 +182,14 @@ const Home = () => {
 						</div>
 						<div className="formation-cover">
 							<img
-								src="/images/rural.jpg"
+								src={`${base}images/rural.jpg`}
 								alt="Federal Rural University of Pernambuco campus"
 								className="formation-cover-image"
 							/>
 						</div>
 						<div className="formation-body">
 							<div className="formation-logo">
-								<img src="/ufrpe.svg" alt="UFRPE" className="formation-logo-image" />
+								<img src={`${base}ufrpe.svg`} alt="UFRPE" className="formation-logo-image" />
 							</div>
 							<div className="formation-text">
 								<h3>Federal Rural University of Pernambuco (UFRPE)</h3>
