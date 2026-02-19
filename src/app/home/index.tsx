@@ -1,16 +1,29 @@
+import { useState } from 'react'
 import ProjectCard from '../components/ProjectCard'
 import { GithubButton, ActionButton } from '../components/ActionButton'
 import Carousel from '../components/Carousel'
 
 const Home = () => {
+	const [menuOpen, setMenuOpen] = useState(false)
+
 	return (
 		<div className="portfolio">
 			<header className="portfolio-header">
 				<div className="portfolio-logo">Douglas Wesley &lt;/&gt;</div>
-				<nav className="portfolio-nav">
-					<a href="#about">About Me</a>
-					<a href="#projects">Projects</a>
-					<a href="#skills">Skills</a>
+				<button
+					className="menu-toggle"
+					onClick={() => setMenuOpen(!menuOpen)}
+					aria-label="Toggle menu"
+					type="button"
+				>
+					<span className={`hamburger ${menuOpen ? 'open' : ''}`} />
+				</button>
+				<nav className={`portfolio-nav ${menuOpen ? 'nav-open' : ''}`}>
+					<a href="#about" onClick={() => setMenuOpen(false)}>About Me</a>
+					<a href="#contacts" onClick={() => setMenuOpen(false)}>Contacts</a>
+					<a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a>
+					<a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a>
+					<a href="#formation" onClick={() => setMenuOpen(false)}>Education</a>
 				</nav>
 			</header>
 
@@ -66,7 +79,8 @@ const Home = () => {
 					</div>
 				</section>
 
-				<div className="section-divider">
+				<div id="contacts" className="section-divider">
+					<h3 className="divider-title">Contacts</h3>
 					<div className="divider-buttons">
 						<GithubButton onClick={() => window.open('https://github.com/douglas-wesley', '_blank')} />
 						<ActionButton
